@@ -40,5 +40,19 @@
     "title": "Life Expectancy vs Population",
     "section": "",
     "text": "library(ggplot2)\ndf &lt;- read.csv(\"gapminder.csv\")\n\nggplot(df, aes(x = population_millions, y = life_expectancy, color = continent)) +\n  geom_point() +\n  labs(title = \"Life Expectancy vs Population\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gapminder Data Exploration",
+    "section": "",
+    "text": "The Gapminder dataset provides insights into global trends in health, wealth, and population in Japan over time.\n\n\n\nLife Expectancy\nGDP per Capita\nPopulation Trends"
+  },
+  {
+    "objectID": "index.html#explore-the-pages",
+    "href": "index.html#explore-the-pages",
+    "title": "Gapminder Data Exploration",
+    "section": "",
+    "text": "Life Expectancy\nGDP per Capita\nPopulation Trends"
   }
 ]

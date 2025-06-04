@@ -1,0 +1,14 @@
+---
+title: "Gapminder Data Exploration"
+format: html
+---
+
+# Welcome to the Gapminder Data Project
+
+The Gapminder dataset provides insights into global trends in health, wealth, and population in Japan over time.
+
+## Explore the Pages:
+
+- [Life Expectancy](life_expectancy.qmd)
+- [GDP per Capita](gdp_per_capita.qmd)
+- [Population Trends](population.qmd)

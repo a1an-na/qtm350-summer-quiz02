@@ -14,13 +14,6 @@
     "text": "library(ggplot2)\ndf &lt;- read.csv(\"gapminder.csv\")\njapan &lt;- subset(df, country == \"Japan\")\n\npar(mfrow = c(3, 1))  # Layout for 3 stacked plots\n\nplot(japan$year, japan$life_expectancy, type = \"b\", pch = 19,\n     main = \"Life Expectancy in Japan\", xlab = \"Year\", ylab = \"Life Expectancy\")\n\nplot(japan$year, japan$gdp_per_capita, type = \"b\", pch = 19,\n     main = \"GDP per Capita in Japan\", xlab = \"Year\", ylab = \"GDP per Capita\")\n\nplot(japan$year, japan$population_millions, type = \"b\", pch = 19,\n     main = \"Population in Japan (millions)\", xlab = \"Year\", ylab = \"Population (millions)\")"
   },
   {
-    "objectID": "life-gdp.html",
-    "href": "life-gdp.html",
-    "title": "Life Expectancy vs GDP per Capita",
-    "section": "",
-    "text": "library(ggplot2)\ndf &lt;- read.csv(\"gapminder.csv\")\n\nggplot(df, aes(x = gdp_per_capita, y = life_expectancy, color = continent)) +\n  geom_point() +\n  scale_x_log10() +\n  labs(title = \"Life Expectancy vs GDP per Capita\")"
-  },
-  {
     "objectID": "qtm350-summer-quiz02.html",
     "href": "qtm350-summer-quiz02.html",
     "title": "qtm350-summer-quiz02",
@@ -35,11 +28,11 @@
     "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
   },
   {
-    "objectID": "life-population.html",
-    "href": "life-population.html",
-    "title": "Life Expectancy vs Population",
+    "objectID": "life-gdp.html",
+    "href": "life-gdp.html",
+    "title": "Life Expectancy vs GDP per Capita",
     "section": "",
-    "text": "library(ggplot2)\ndf &lt;- read.csv(\"gapminder.csv\")\n\nggplot(df, aes(x = population_millions, y = life_expectancy, color = continent)) +\n  geom_point() +\n  labs(title = \"Life Expectancy vs Population\")"
+    "text": "library(ggplot2)\ndf &lt;- read.csv(\"gapminder.csv\")\n\nggplot(df, aes(x = gdp_per_capita, y = life_expectancy, color = continent)) +\n  geom_point() +\n  scale_x_log10() +\n  labs(title = \"Life Expectancy vs GDP per Capita\")"
   },
   {
     "objectID": "index.html",
@@ -54,5 +47,12 @@
     "title": "Gapminder Data Exploration",
     "section": "",
     "text": "Life Expectancy\nGDP per Capita\nPopulation Trends"
+  },
+  {
+    "objectID": "life-population.html",
+    "href": "life-population.html",
+    "title": "Life Expectancy vs Population",
+    "section": "",
+    "text": "library(ggplot2)\ndf &lt;- read.csv(\"gapminder.csv\")\n\nggplot(df, aes(x = population_millions, y = life_expectancy, color = continent)) +\n  geom_point() +\n  labs(title = \"Life Expectancy vs Population\")"
   }
 ]

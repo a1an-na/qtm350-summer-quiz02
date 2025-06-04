@@ -3,14 +3,11 @@ title: "Life Expectancy vs Population"
 format: html
 ---
 
-```{python}
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+```{r}
+library(ggplot2)
+df <- read.csv("gapminder.csv")
 
-df = pd.read_csv("gapminder.csv")
-
-sns.set_theme()
-sns.scatterplot(data=df, x="population_millions", y="life_expectancy", hue="continent")
-plt.title("Life Expectancy vs Population (1952–2007)")
-plt.show()
+ggplot(df, aes(x = population_millions, y = life_expectancy, color = continent)) +
+  geom_point() +
+  labs(title = "Life Expectancy vs Population")
+```

@@ -3,23 +3,19 @@ title: "Country Analysis: Japan"
 format: html
 ---
 
-```{python}
-import pandas as pd
-import matplotlib.pyplot as plt
+```{r}
+library(ggplot2)
+df <- read.csv("gapminder.csv")
+japan <- subset(df, country == "Japan")
 
-df = pd.read_csv("gapminder.csv")
-country_df = df[df["country"] == "Japan"]
+par(mfrow = c(3, 1))  # Layout for 3 stacked plots
 
-fig, axs = plt.subplots(3, 1, figsize=(8, 10))
+plot(japan$year, japan$life_expectancy, type = "b", pch = 19,
+     main = "Life Expectancy in Japan", xlab = "Year", ylab = "Life Expectancy")
 
-axs[0].plot(country_df["year"], country_df["life_expectancy"], marker='o')
-axs[0].set_title("Life Expectancy in Japan")
+plot(japan$year, japan$gdp_per_capita, type = "b", pch = 19,
+     main = "GDP per Capita in Japan", xlab = "Year", ylab = "GDP per Capita")
 
-axs[1].plot(country_df["year"], country_df["gdp_per_capita"], marker='o')
-axs[1].set_title("GDP per Capita in Japan")
-
-axs[2].plot(country_df["year"], country_df["population_millions"], marker='o')
-axs[2].set_title("Population in Japan (millions)")
-
-plt.tight_layout()
-plt.show()
+plot(japan$year, japan$population_millions, type = "b", pch = 19,
+     main = "Population in Japan (millions)", xlab = "Year", ylab = "Population (millions)")
+```

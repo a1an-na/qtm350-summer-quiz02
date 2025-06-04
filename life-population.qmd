@@ -1,0 +1,16 @@
+---
+title: "Life Expectancy vs Population"
+format: html
+---
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("gapminder.csv")
+
+sns.set_theme()
+sns.scatterplot(data=df, x="population_millions", y="life_expectancy", hue="continent")
+plt.title("Life Expectancy vs Population (1952–2007)")
+plt.show()

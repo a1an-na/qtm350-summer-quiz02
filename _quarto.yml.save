@@ -14,12 +14,14 @@ website:
         text: Life Expectancy vs Population
       - href: country.qmd
         text: Country Analysis
+  page-footer: "Built with Quarto by a1an-na"
 
 format:
   html:
     theme: cosmo
+    toc: true
+    code-fold: true
 
 execute:
   echo: true
   eval: true
-  engine: python
